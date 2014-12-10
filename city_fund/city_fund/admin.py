@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import SignUp
+from .city_fund.city_fund.models import SignUp
 
 
 # Register your models here.
