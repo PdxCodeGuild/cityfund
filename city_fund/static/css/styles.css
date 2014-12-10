@@ -1,0 +1,338 @@
+/* Custom Fonts ----------- */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+
+/* Global Styles ----------- */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.headline {
+    letter-spacing: .1em;
+}
+
+button.btn {
+    border-radius: 0;
+}
+
+.glyphicon {
+    color: #1FB8CD;
+    float: right;
+    padding-top: 5%;
+}
+
+.glyphicon:hover, .glyphicon:focus {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.form-control {
+    width: 50%;
+    border-radius: 0;
+    margin: auto;
+}
+
+/* Navigation ----------- */
+.container {
+    width: 100%;
+}
+
+.nav, .navbar-default, .navbar-collapse, .navbar-default .navbar-form, ul.nav.navbar-nav li.active a {
+    border: none;
+    background-color: rgb(73,73,73);
+}
+
+.navbar-default .navbar-brand {
+    font-size: 2em;
+    font-variant: small-caps;
+    letter-spacing: 0.2em;
+    color: #348387;
+}
+
+ul.nav.navbar-nav {
+    margin-top: -0.25%;
+}
+
+ul.nav.navbar-nav li.active a  {
+    color: white;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.navbar-default .navbar-nav li a {
+    color: #DE9A3A;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+ul.nav.navbar-nav li a:hover, ul.nav.navbar-nav li.active a:hover, div.navbar-header a.navbar-brand:hover {
+    color: #B22F4B;
+    background-color: none;
+}
+
+.navbar-brand {
+    float: none;
+}
+
+.navbar-brand img {
+    display: inline-block;
+    position: relative;
+}
+
+/* Landing Page ----------- */
+
+/* First Section ----------- */
+.landing-intro {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 35px 5%;
+    letter-spacing: .2em;
+
+}
+
+.landing-intro-text {
+    margin-left: 6%;
+    font-family: 'Roboto Slab', serif;
+}
+
+section.landing-intro {
+    width: 100%;
+    height: 550px;
+    background-position: center center;
+    background-size: cover;
+    background-color: #000;
+    margin-top: 40px;
+    color: #FFF;
+}
+
+h1.landing-intro-text {
+    font-size: 3.5em;
+}
+
+section.landing-intro h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5em;
+    font-weight: 200;
+    line-height: 0;
+    margin-top: 3%;
+    opacity: .75;
+}
+
+section.landing-intro ul {
+    list-style: none;
+    font-size: 1.2em;
+    line-height: 2.5;
+    padding: 2em;
+    letter-spacing: .2em;
+    font-weight: 700;
+}
+
+section.landing-intro button {
+    background-color: #1FB8CD;
+    color: #FFF;
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    opacity: .9;
+}
+
+section.landing-intro button:hover, section.landing-intro button:focus {
+    background-color: #FFF;
+    color: #1FB8CD;
+}
+
+.first {
+    background-image: url(../img/portland.png);
+}
+
+/* Second Section ----------- */
+
+.second {
+    line-height: 2;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: .3em;
+}
+
+section.landing-intro.second {
+    margin-top: -5px; 
+    background-image: url(../img/business.jpg);
+    height: 450px;
+    background-position: 50% 10%;
+}
+
+section.landing-intro h1.second {
+    font-weight: 600;
+    opacity: .9;
+    font-size: 3em; 
+}
+
+p.landing-intro-text {
+    margin-top: 5%;
+    font-size: 1.3em;
+}
+
+/* Third Section ----------- */
+
+.third {
+    color: #000;
+}
+
+section.landing-intro.third {
+    margin-top: -5px; 
+    background-image: url(../img/dublin.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-color: #000;
+    height: 550px;
+}
+
+h1.third {
+    color: #348387;
+}
+
+p.third {
+    margin-top: 2%;
+}
+
+h3.landing-intro-text.third {
+    width: 70%;
+    margin: auto;
+    padding-top: 5%;
+}
+
+h3.third strong {
+    color: #7C0E17;
+    text-align: center;
+    margin: auto;
+}
+
+section.landing-intro button.pink {
+    background-color: #D50909;
+    padding: 5px 50px;
+    border: transparent;
+}
+
+section.landing-intro button.pink:hover, section.landing-intro button.pink:focus {
+    color: #D50909;
+    background-color: #FFF;
+}
+
+/* Responsive Design ----------- */
+
+    /* Large desktops and laptops ----------- */
+    @media (min-width: 1200px) {
+        /* Styles ----------- */
+
+    }
+
+    /* Portrait tablets and medium desktops ----------- */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        /* Styles ----------- */
+
+    }
+
+    /* Portrait tablets and small desktops ----------- */
+    @media (min-width: 768px) and (max-width: 991px) {
+        /* Landing Page ----------- */
+        /* First Section ----------- */
+        section.landing-intro {
+            height: 450px;
+        }
+        h1.landing-intro-text {
+            font-size: 2.5em;
+        }
+
+        section.landing-intro h2 {
+            font-size: 2em;
+        }
+
+        section.landing-intro ul {
+            font-size: 1em;
+            line-height: 2;
+        }
+
+        /* Second Section ----------- */
+        .second {
+            line-height: 1.5;
+        }
+    }
+
+    /* Landscape phones and portrait tablets ----------- */
+    @media (max-width: 767px) {
+        /* Navigation ----------- */
+        ul.nav.navbar-nav {
+            float: none;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        /* Landing Page ----------- */
+        /* First Section ----------- */
+        section.landing-intro {
+            height: 415px;
+        }
+        .landing-intro-text {
+            margin: auto;
+            text-align: center;
+        }
+
+        h1.landing-intro-text {
+        font-size: 2em;
+        }
+
+        section.landing-intro h2 {
+            font-size: 1.5em;
+            line-height: inherit;
+        }
+
+        section.landing-intro ul {
+            font-size: 1em;
+            line-height: 2;
+        }
+
+        section.landing-intro button {
+            font-size: 1em;
+        }
+
+        /* Second Section ----------- */
+        .second {
+            line-height: 1.5;
+        }
+
+        section.landing-intro h1.second {
+            font-weight: 600;
+            opacity: .9;
+            font-size: 2em; 
+        }
+
+        p.landing-intro-text {
+            font-size: 1em;
+        }
+    }
+
+    /* Landscape phones and smaller ----------- */
+    @media (max-width: 480px) {
+        /* Landing Page ----------- */
+        /* First Section ----------- */
+
+        section.landing-intro h2 {
+            margin-top: 0;
+        }
+
+        section.landing-intro h1 {
+            line-height: 1.5;
+        }
+
+        section.landing-intro ul {
+            padding: 1em;
+        }
+
+        /* Third Section ----------- */
+
+        h3.landing-intro-text.third {
+            font-size: 1em;
+        }
+    }

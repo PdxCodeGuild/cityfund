@@ -1,0 +1,14 @@
+Color Palette
+Blue #348387
+Orange #DE9A3A
+Red #7C0E17
+Charcoal Gray rgb(73,73,73)
+Yellow #DE9A3A
+Green #9EBA95
+Off-white #E8E4DF
+Salmon #D50909
+Light Blue #29ABE2, #1FB8CD
+
+Fonts
+Source Sans Pro
+Roboto Slab
