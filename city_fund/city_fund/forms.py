@@ -1,12 +1,18 @@
 from django import forms
 from django.forms import ModelForm
 from signup.models import SignUp
+from django.shortcuts import render_to_response
 
 
 class SignUpForm(ModelForm):
     class Meta:
         model = SignUp
         fields = ['name', 'email', 'message']
+
+    def unique_email(self):
+        email = self.cleaned_data.get('email')
+        if SignUp.objects.filter(email__iexact=email).count() > 0:
+            return False
 
 
 # class SignUp(forms.Form):
