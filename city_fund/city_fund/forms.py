@@ -13,6 +13,8 @@ class SignUpForm(ModelForm):
         email = self.cleaned_data.get('email')
         if SignUp.objects.filter(email__iexact=email).count() > 0:
             return False
+        else:
+            return True
 
 
 # class SignUp(forms.Form):
