@@ -8,14 +8,6 @@ body {
     background-color: #000;
 }
 
-a {
-    transition: color 0.3s ease;
-}
-
-button {
-    transition: color 0.5s ease, background-color 0.5s ease;
-}
-
 .headline {
     letter-spacing: .1em;
 }
@@ -33,10 +25,6 @@ button.btn {
 .glyphicon:hover, .glyphicon:focus {
     text-decoration: none;
     color: #FFF;
-}
-
-.up {
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .form-control {
