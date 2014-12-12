@@ -2,21 +2,26 @@
 
 {% block signup %}
 
-<form method="POST">
-    <!--<div class="form-group">-->
-      <!--<label for="name"></label>-->
-      <!--<input type="text" class="form-control" id="name" placeholder="Your name">-->
-    <!--</div>-->
-      <!--<div class="form-group">-->
-      <!--<label for="email"></label>-->
-      <!--<input type="email" class="form-control" id="email" placeholder="Your email">-->
-    <!--</div>-->
-      <!--<div class="form-group">-->
-      <!--<label for="message"></label>-->
-      <!--<input type="textarea" class="form-control" id="message" placeholder="Message">-->
-    <!--</div>-->
+<form method="POST" class="signup-form" role="form">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" value="Submit" class="btn btn-default pink">Submit</button>
-</form>
+    <div class="form-group">
+      <label for="name" class="control-label sr-only">name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" placeholder="Your Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="control-label sr-only">email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" placeholder="Your email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message" class="control-label sr-only">message</label>
+      <div class="col-sm-10">
+        <textarea rows="5" class="form-control col-md-6" id="message" placeholder="Message"></textarea>
+      </div>  
+      <button type="submit" value="Submit" class="btn btn-default pink">Submit</button>
+    </div>
+  </form>
 {% endblock signup %}
