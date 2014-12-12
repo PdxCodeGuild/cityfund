@@ -1,16 +1,14 @@
-$().ready(function() {
+$(document).ready(function() {
 
-    var scrollToId = function(id) {
-        var element = $("#" + id);
-        $('html, body').animate({
-            scrollTop: element.offset().top
-                }, 500 );
+    var scrollToId = function(element) {
+        $('html, body').animate(
+	    {scrollTop: $(element).offset().top}, 500);
     }
 
     $("a").click(function(event) {
         if ($(this).attr("href").match("#")) {
             event.preventDefault();
-            var pageSection = $(this).attr('href').replace('#', '')
+            var pageSection = $(this).attr('href');
             scrollToId(pageSection);
             }
     });
