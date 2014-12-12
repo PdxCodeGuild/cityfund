@@ -1,0 +1,95 @@
+{% extends "admin/base.html" %}
+{% block title %}{{ title }} | CityFund{% endblock %}
+
+{% block extrastyle %}
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #header{
+            background-color: #000000;
+            color: #DE9A3A;
+        }
+
+        .dashboard {
+            background-color: #444;
+        }
+
+        #branding h1 a:link, #branding h1 a:visited {
+            color: #de9a3a;
+        }
+
+        h1 {
+            font-size: 18px;
+            color: #e8e4df;
+            padding: 0px 6px 0px 0px;
+            margin: 0px 0px 0.2em;
+        }
+
+        .colM h1 {
+            font-size: 18px;
+            color: #666;
+            padding: 0px 6px 0px 0px;
+            margin: 0px 0px 0.2em;
+        }
+        .module {
+            border: none;
+        }
+
+
+        .flex h1 {
+            font-size: 18px;
+            color: #666;
+            padding: 0px 6px 0px 0px;
+            margin: 0px 0px 0.2em;
+        }
+
+        .module h2, .module caption, .inline-group h2 {
+            margin: 0px;
+            padding: 2px 5px 3px;
+            font-size: 11px;
+            text-align: left;
+            font-weight: bold;
+            background: repeat-x scroll left top #9eba95;
+            color: #FFF;
+        }
+
+        td, th {
+            font-size: 11px;
+            line-height: 13px;
+            border-bottom: 1px solid #EEE;
+            vertical-align: top;
+            padding: 5px;
+        }
+
+        a:link, a:visited {
+            color: #434547;
+            text-decoration: none;
+        }
+
+        #content-related .module h2 {
+            background: repeat-x scroll left bottom #348387;
+            color: #fff;
+        }
+
+        .button.default, input.default[type="submit"], .submit-row input.default {
+            border: none;
+            background: repeat-x scroll center bottom #348387;
+            font-weight: bold;
+            color: #FFF;
+            float: right;
+        }
+
+        .row1 {
+            background: none repeat scroll 0% 0% rgb(234, 236, 239);
+        }
+    </style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="/static/img/logo-bw.png" id="cfpic" style="
+                                                                                                        margin-right: 10px;
+                                                                                                        ">CityFund </a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
