@@ -281,6 +281,7 @@ section.landing-intro button.pink {
 section.landing-intro button.pink:hover, section.landing-intro button.pink:focus {
   color: #D50909;
   background-color: #FFF;
+  display: inline;
 }
 
 h3.fourth {

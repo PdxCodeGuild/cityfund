@@ -1,33 +1,28 @@
 from django import forms
-from django.forms import ModelForm
+
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Submit, Fieldset, Button
+
 from signup.models import SignUp
-from django.shortcuts import render_to_response
 
 
-class SignUpForm(ModelForm):
-    class Meta:
-        model = SignUp
-        fields = ['name', 'email', 'message']
+class SignUpForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+	super(SignUpForm, self).__init__(*args, **kwargs)
+	self.helper = FormHelper(self)
+	self.helper.form_class = "form-inline signup-form"
+	self.helper.form_method = "post"
+	self.helper.layout = Layout(
+	    Fieldset("", "name", "email"),
+	    Button("submit", "Sign Up", css_class="btn-default pink")
+	    )
 
-    def unique_email(self):
-        email = self.cleaned_data.get('email')
-        if SignUp.objects.filter(email__iexact=email).count() > 0:
-            return False
-        else:
-            return True
+    name = forms.CharField(
+	label="Name",
+	max_length=100,
+	required=False,
+    )
 
-
-# class SignUp(forms.Form):
-#     name = forms.CharField(label="Your Name", max_length=100)
-#     email = forms.EmailField(label="Your Email", max_length=100)
-#     message = forms.CharField(label="Message", widget=forms.Textarea)
-
-
-    # def clean(self):
-    #     cleaned_data = self.cleaned_data
-    #
-    #     name = cleaned_data.get("name")
-    #     email = cleaned_data.get("email")
-    #     message = cleaned_data.get("message")
-    #
-    #     return cleaned_data
+    email = forms.EmailField(
+	label="Email",
+    )
