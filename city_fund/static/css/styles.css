@@ -12,7 +12,7 @@ a {
     transition: color 0.3s ease;
 }
 
-button {
+button, input {
     transition: color 0.5s ease, background-color 0.5s ease;
 }
 
@@ -292,21 +292,23 @@ div.signup-form label {
   color: #7C0E17;
 }
 
-div.signup-form input, div.signup-form textarea {
+/*div.signup-form input, div.signup-form textarea {
   color: rgb(73, 73, 73);
-}
+}*/
 
-section.landing-intro button.pink {
+#button-id-submit {
   background-color: #D50909;
   padding: 5px 50px;
   border: transparent;
   margin-left: 2.5%;
+  border-radius: inherit;
+  display: inline-block;
 }
 
-section.landing-intro button.pink:hover, section.landing-intro button.pink:focus {
+#button-id-submit:hover, 
+#button-id-submit:focus {
   color: #D50909;
   background-color: #FFF;
-  display: inline;
 }
 
 h3.fourth {
