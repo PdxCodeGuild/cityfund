@@ -39,7 +39,7 @@
     	   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     	<![endif]-->
         <!-- Fixed navbar -->
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <nav class="navbar navbar-default" role="navigation">
                 <div class="nav-container container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -51,7 +51,7 @@
                         <a class="navbar-brand" href="#home"><img src="{% static 'img/logo-bw.png' %}"alt="CityFund logo">CityFund</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav navbar-right">
                 <!--        <li class="active"><a href="#">Home</a></li>
                  -->        <li><a href="#about">About</a></li>
                             <li><a href="#invest">Invest</a></li>
@@ -105,16 +105,16 @@
                 <a class="glyphicon glyphicon-chevron-up headline" href="#home" title="Top"><span class="up">back to top</span></a>
             </section>
 
-            <hr>
-            	<footer>
-                    <p>&copy; CityFund 2014</p>
-                </footer>
+        	<footer>
+                <p>&copy; CityFund 2014</p>
+            </footer>
         </div><!-- /container -->
+        
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
         <!-- custom js -->
-        <script src="{% static 'js/scripts.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
     </body>
 </html>

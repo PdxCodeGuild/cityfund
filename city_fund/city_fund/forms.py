@@ -17,12 +17,15 @@ class SignUpForm(forms.Form):
 	    Button("submit", "Sign Up", css_class="btn-default pink")
 	    )
 
+
     name = forms.CharField(
 	label="Name",
+	widget=forms.TextInput(attrs={'placeholder': 'your name'}),
 	max_length=100,
 	required=False,
     )
 
     email = forms.EmailField(
 	label="Email",
+	widget=forms.TextInput(attrs={'placeholder': 'your email'}),
     )
