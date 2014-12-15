@@ -127,6 +127,9 @@ section.landing-intro {
     height: 550px;
     background-position: center center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-color: #000;
     margin-top: 40px;
     color: #FFF;
@@ -185,6 +188,9 @@ section.landing-intro button:hover, section.landing-intro button:focus {
 section.landing-intro.second {
     margin-top: -5px;
     background-image: url(../img/business.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     height: 450px;
     background-position: 50% 10%;
 }
@@ -211,6 +217,9 @@ section.landing-intro.third {
     background-image: url(../img/Dublin.jpg);
     background-position: center center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-color: #000;
     height: 400px;
 }
@@ -236,6 +245,9 @@ section.landing-intro.fourth {
   background-image: url(../img/businessman.jpg);
   background-position: center 100%;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-color: #000;
   height: 650px;
 }
@@ -369,6 +381,19 @@ h3.fourth {
         p.landing-intro-text {
             font-size: 1em;
         }
+
+        /* Fourth Section ----------- */
+        page-header fourth {
+          text-align: center;
+        }
+
+        div.signup-form {
+          margin: auto;
+        }
+
+        section.landing-intro button.pink {
+          margin: auto;
+        }
     }
 
     /* Landscape phones and smaller ----------- */
@@ -382,11 +407,31 @@ h3.fourth {
 
         section.landing-intro h1 {
             line-height: 1.5;
+            font-size: 1.5em;
+            text-align: center;
         }
 
         section.landing-intro ul {
             padding: 1em;
         }
+
+        /* Fourth Section ----------- */
+
+        page-header fourth {
+          text-align: center;
+        }
+
+        div.signup-form {
+          margin: auto;
+        }
+
+        section.landing-intro button.pink {
+          margin: auto;
+        }
+}
+
+
+
 
         /* Third Section ----------- */
 
