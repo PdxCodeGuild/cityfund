@@ -14,15 +14,18 @@ class SignUpForm(forms.Form):
 	self.helper.form_method = "post"
 	self.helper.layout = Layout(
 	    Fieldset("", "name", "email"),
-	    Button("submit", "Sign Up", css_class="btn-default pink")
+	    Submit("submit", "Sign Up", css_class="btn btn-primary")
 	    )
+
 
     name = forms.CharField(
 	label="Name",
+	widget=forms.TextInput(attrs={'placeholder': 'your name'}),
 	max_length=100,
 	required=False,
     )
 
     email = forms.EmailField(
 	label="Email",
+	widget=forms.TextInput(attrs={'placeholder': 'your email'}),
     )
