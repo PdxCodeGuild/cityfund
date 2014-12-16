@@ -1,19 +1,7 @@
-$(document).ready(function() {
-
-    var scrollToId = function(element) {
-        $('html, body').animate(
-	    {scrollTop: $(element).offset().top}, 500);
-    }
-
-    $("a").click(function(event) {
-        if ($(this).attr("href").match("#")) {
-            event.preventDefault();
-            var pageSection = $(this).attr('href');
-            scrollToId(pageSection);
-            }
-    });
-
-    var ScrollSneak = function(prefix, wait) {
+/**
+ * Created by student on 12/16/14.
+ */
+var ScrollSneak = function(prefix, wait) {
     // clean up arguments (allows prefix to be optional - a bit of overkill)
     if (typeof(wait) == 'undefined' && prefix === true) prefix = null, wait = true;
     prefix = (typeof(prefix) == 'string' ? prefix : window.location.host).split('_').join('');
@@ -26,7 +14,7 @@ $(document).ready(function() {
             window.scrollTo(name[1], name[2]);
             window.name = name.slice(3).join('_');
         }
-    };
+    }
     // if not wait, scroll immediately
     if (!wait) this.scroll();
 
@@ -46,19 +34,5 @@ $(document).ready(function() {
 	// store the scroll
         if (top || left) window.name = prefix + '_' + left + '_' + top + '_' + pre_name;
         return true;
-            }
-        };
-
-    var sneaky = new ScrollSneak("tabs", false);
-    var capture = true;
-
-    var urlHash = window.location.hash;
-
-    $("#submit-id-submit").on("click", function(e) {
-        sneaky.sneak();
-        capture = true;
-    });
-
-    capture = false;
-
-});
+    }
+}
