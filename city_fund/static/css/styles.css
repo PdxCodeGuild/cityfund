@@ -8,20 +8,26 @@ body {
     background-color: rgb(73,73,73);
 }
 
+section {
+    padding: 0;
+}
+
 a {
     transition: color 0.3s ease;
 }
 
-button, input {
+button, input, .btn {
     transition: color 0.5s ease, background-color 0.5s ease;
+    border-radius: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 0;
 }
 
 .headline {
     letter-spacing: .1em;
-}
-
-button.btn {
-    border-radius: 0;
 }
 
 .glyphicon {
@@ -46,6 +52,7 @@ button.btn {
     border: none;
     box-shadow: none;
     -webkit-box-shadow: none;
+    letter-spacing: .1em;
 }
 
 .page-header {
@@ -58,30 +65,12 @@ button.btn {
   border-radius: 0;
 }
 
-.container {
-    width: 100%;
-    padding: 0;
-}
-
-section {
-    padding: 0;
-}
-
-.form-group {
-    width: 40%;
-    padding-right: 5%;
-}
-
 .form-inline .form-control {
     width: 100%;
 }
 
 .form-inline .control-label {
     margin-left: 1px;
-}
-
-div.signup-form {
-    margin-top: 3%;
 }
 
 /* Navigation ----------- */
@@ -268,7 +257,7 @@ p.third {
 section.landing-intro.fourth {
   margin-top: -5px;
   background-image: url(../img/businessman.jpg);
-  background-position: center 100%;
+  background-position: center 70%;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -284,31 +273,50 @@ h1.fourth {
 }
 
 div.signup-form {
-  width: 80%;
-  margin-left: 5%;
+    margin-top: 3%;
+  	margin-left: 5%;
 }
 
 div.signup-form label {
-  color: #7C0E17;
+	color: #7C0E17;
+	line-height: 0;
+}
+
+.signup-form .form-inline.signup-form {
+	width: 95%;
 }
 
 /*div.signup-form input, div.signup-form textarea {
   color: rgb(73, 73, 73);
 }*/
 
-#button-id-submit {
-  background-color: #D50909;
-  padding: 5px 50px;
-  border: transparent;
-  margin-left: 2.5%;
-  border-radius: inherit;
-  display: inline-block;
+.signup-form fieldset {
+	display: inline-block;
+	width: 80%;
+	margin-right: -10%;
 }
 
-#button-id-submit:hover, 
-#button-id-submit:focus {
-  color: #D50909;
-  background-color: #FFF;
+.signup-form .form-group {
+    width: 40%;
+    padding-right: 5%;
+}
+
+.signup-form .btn-primary {
+	background-color: #D50909;
+  	padding: 5px 50px;
+  	border: transparent;
+  	margin: auto;
+  	border-radius: inherit;
+  	display: inline;
+  	border-color: transparent;
+  	padding: 10px 50px;
+  	letter-spacing: .1em;
+  	font-weight: 600;
+}
+
+.signup-form .btn-primary:hover, .signup-form .btn-primary:focus {
+	color: #D50909;
+	background: white;
 }
 
 h3.fourth {
@@ -367,6 +375,39 @@ footer p {
         .second {
             line-height: 1.5;
         }
+
+        section.landing-intro h1.second {
+        	font-size: 2.5em;
+        }
+
+        p.landing-intro-text {
+        	font-size: 1.2em;
+        }
+
+        /* Fourth Section ----------- */
+
+        h1.fourth {
+        	font-size: 1.8em;
+        }
+
+        div.signup-form {
+        	width: 100%;
+        }
+
+        label.control-label {
+        	display: none;
+        }
+
+        .signup-form .form-group {
+        	width: 45%;
+        	padding-right: 3%;
+        }
+
+        .signup-form .btn-primary {
+        	padding: 10px 30px; 
+        	vertical-align: top;
+        	margin-left: 5%;
+        }
     }
 
     /* Landscape phones and portrait tablets ----------- */
@@ -422,16 +463,31 @@ footer p {
         }
 
         /* Fourth Section ----------- */
-        page-header fourth {
+        .page-header.fourth {
           text-align: center;
         }
 
-        div.signup-form {
-          margin: auto;
+        h1.fourth {
+        	font-size: 1.8em;
         }
 
-        section.landing-intro button.pink {
-          margin: auto;
+        div.signup-form {
+        	width: 100%;
+        }
+
+        label.control-label {
+        	display: none;
+        }
+
+        .signup-form .form-group {
+        	width: 45%;
+        	padding-right: 3%;
+        }
+
+        .signup-form .btn-primary {
+        	padding: 10px 30px; 
+        	vertical-align: top;
+        	margin-left: 5%;
         }
     }
 
@@ -462,15 +518,36 @@ footer p {
 
         /* Fourth Section ----------- */
 
-        page-header fourth {
+        .page-header.fourth {
           text-align: center;
+          line-height: 1.2;
         }
 
         div.signup-form {
           margin: auto;
         }
 
-        section.landing-intro button.pink {
-          margin: auto;
+        .signup-form .form-inline.signup-form {
+        	width: 100%; 
+        }
+
+        .signup-form fieldset {
+        	display: block;
+        	margin: auto; 
+        	margin-top: 5%; 
+        }
+
+        .signup-form .form-group {
+        	width: 90%; 
+        	padding-right: 0; 
+        	margin: auto; 
+        }
+
+        .signup-form .btn-primary {
+        	padding: 5px 20px;
+        	vertical-align: middle;
+        	margin: auto; 
+        	display: block;
+        	margin-bottom: 10%;
         }
 }
