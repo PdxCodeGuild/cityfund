@@ -10,14 +10,14 @@ from signup.models import SignUp
 def home(request):
 
     if request.POST:
-	form = SignUpForm(request.POST)
-	if form.is_valid():
-	    name = form.cleaned_data["name"]
-	    email = form.cleaned_data["email"]
-	    new_signup = SignUp(name=name, email=email)
-	    new_signup.save()
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data["name"]
+            email = form.cleaned_data["email"]
+            new_signup = SignUp(name=name, email=email)
+            new_signup.save()
     else:
-	form = SignUpForm()
+        form = SignUpForm()
 
     template = {}
     template.update(csrf(request))
