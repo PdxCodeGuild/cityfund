@@ -1,25 +1,21 @@
 {% extends 'index.html' %}
-{% load crispy_forms_tags %}
+
 {% block signup %}
 
-  {% crispy form %}
   {% if messages %}
   <div class="col-sm-10 col-sm-offset-1">
     <div class="row">
     {% for message in messages %}
       <h3 class="alert alert-{{ message.tags }}">{{ message }}</h3>
+      <div>
+        <ul>
+	  <li>Check that you didn't enter the email incorrectly like name@site</li>
+	  <li>Have you registered with this email address before?</li>
+        </ul>
+      </div>
     {% endfor %}
     </div>
   </div>
   {% endif %}
-  {% for field in form %}
-    {% if field.errors %}
-      <div class="col-sm-10 col-sm-offset-1">
-	<div class="row">
-	  <p>{{ field.error }}</p>
-	</div>
-      </div>
-    {% endif %}
-  {% endfor %}
 
 {% endblock signup %}
