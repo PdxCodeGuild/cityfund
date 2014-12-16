@@ -116,27 +116,5 @@
         <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
         <!-- custom js -->
         <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/no_scroll.js' %}"></script>
-        <script>
-            var sneaky = new ScrollSneak("tabs", false);
-            var capture = true;
-
-            $(document).ready(function() {
-
-            var urlHash = window.location.hash;
-
-            $("#submit-id-submit").on("click", function(e) {
-                sneaky.sneak();
-                capture = true;
-            });
-
-            capture = false;
-
-            });
-
-//            window.onscroll = function () {
-//                if (capture) sneaky.scroll(), capture = false; // This part is only needed for hash links
-//            };
-        </script>
     </body>
 </html>
