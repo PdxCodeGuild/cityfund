@@ -7,6 +7,12 @@
     <div class="row">
     {% for message in messages %}
       <h3 class="alert alert-{{ message.tags }}">{{ message }}</h3>
+      <div>
+        <ul>
+	  <li>Check that you didn't enter the email incorrectly like name@site</li>
+	  <li>Have you registered with this email address before?</li>
+        </ul>
+      </div>
     {% endfor %}
     </div>
   </div>

@@ -22,6 +22,7 @@ def home(request):
 	    print(outgoing_messages)
 	    return render_to_response("signup.html", locals(), context_instance=RequestContext(request))
 	else:
+	    messages.error(request, "Looks like there was an error")
 	    outgoing_messages = messages.get_messages(request)
 	    print(outgoing_messages)
 	    return render_to_response("invalid_form.html", locals(), context_instance=RequestContext(request))
