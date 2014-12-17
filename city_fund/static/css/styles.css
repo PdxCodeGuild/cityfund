@@ -322,7 +322,8 @@ div.signup-form label {
 .signup-form .help-block {
     position: absolute;
     font-style: italic;
-    font-size: 1.3em;
+    font-size: .9em;
+    margin-top: -10px;
 }
 
 .signup-form .has-error .help-block {
@@ -333,6 +334,22 @@ div.form-group.has-error input {
     border: 1px solid #D51511;
 }
 
+.signup-form .alert-success, .signup-form .alert-danger {
+    border-color: transparent;
+    border-radius: 0; 
+}
+
+.alert-danger {
+    background-color: rgba(242, 222, 222, 0.77);
+    color: #D50909;
+}
+
+.alert-success {
+    background-color: rgba(223, 240, 216, 0.62);
+    color: rgba(100, 126, 89, 1);
+    font-size: 1.5em;
+}
+
 h3.fourth {
   font-size: 1.5em;
   color: #348387;
@@ -340,9 +357,17 @@ h3.fourth {
   text-align: center;
 }
 
+.signup-form ul {
+    color: rgb(73,73,73);
+    margin-top: -50px;
+    font-size: 1.1em;
+}
+
 /* Footer ----------- */
 footer {
     background-color: rgb(73,73,73);
+    height: 5%;
+    width: auto;
 }
 
 footer p {
@@ -432,6 +457,9 @@ footer p {
             text-align: center;
             font-size: 1.5em;
         }
+        div.navbar-header {
+            margin-right: 0 !important;
+        }
 
         /* Landing Page ----------- */
         /* First Section ----------- */
@@ -493,15 +521,23 @@ footer p {
             display: none;
         }
 
+        .signup-form .form-inline.signup-form {
+            margin: auto;
+        }
+
         .signup-form .form-group {
-            width: 45%;
-            padding-right: 3%;
+            width: 80%;
+            padding-right: 0; 
+            margin: auto;
+            display: block;
+
         }
 
         .signup-form .btn-primary {
             padding: 10px 30px; 
             vertical-align: top;
-            margin-left: 5%;
+            display: block;
+            margin: auto;
         }
     }
 
@@ -568,12 +604,18 @@ footer p {
             margin: auto;
         }
 
+        .signup-form .alert-success, .signup-form .alert-danger {
+            font-size: 1.2em;
+            width: 80%;
+            margin: auto;
+        }
+
         .signup-form .btn-primary {
             padding: 5px 20px;
             vertical-align: middle;
             margin: auto; 
             display: block;
-            margin-top: 50px;
+            margin-top: 10px;
             margin-bottom: 10%;
         }
 
