@@ -45,12 +45,19 @@ HOW to install and run the web app
      - $ createuser student
      - $ psql cityfund
      - $ alter user student with password 'codeguild';
-     
+     - $ grant all on database cityfund to student;
+     - $ /q
 
-- establish models as tables in database ($python manage.py makemigrations followed by $python manage.py migrate)
+- establish models as tables in database 
+    - $python manage.py makemigrations 
+    - $python manage.py migrate
+    - follow prompts to create superuser
     
 - run server to view site and admin ($python manage.py runserver)
 
-- open internet browser and go to  http://localhost:8000/
+- open internet browser and go to  http://localhost:8000/ to view site
+
+- to view admin go to http://localhost:8000/admin
+
 
 
