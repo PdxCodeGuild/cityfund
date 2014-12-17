@@ -12,7 +12,7 @@ $(document).ready(function() {
             scrollToId(pageSection);
             }
     });
-
+    
     var ScrollSneak = function(prefix, wait) {
     // clean up arguments (allows prefix to be optional - a bit of overkill)
     if (typeof(wait) == 'undefined' && prefix === true) prefix = null, wait = true;
@@ -61,4 +61,23 @@ $(document).ready(function() {
 
     capture = false;
 
+        // show and hide Navbar
+    $(function smartNav(){
+        //Keep track of last scroll
+        var lastScroll = 0;
+        $(window).scroll(function(event){
+            //Sets the current scroll position
+            var scrollPosition = $(this).scrollTop();
+            //Determines up-or-down scrolling
+            if (scrollPosition > lastScroll){ 
+                setTimeout(function() {
+                    $('nav').removeClass('navbar-fixed-top');
+                }, 1500);
+            } else {
+                $('nav').addClass('navbar-fixed-top');
+                }
+            //Updates scroll position
+            lastScroll = scrollPosition;
+        });
+    
 });
