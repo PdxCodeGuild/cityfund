@@ -263,7 +263,7 @@ section.landing-intro.fourth {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-color: #000;
-  height: 450px;
+  height: 550px;
 }
 
 h1.fourth {
@@ -274,16 +274,16 @@ h1.fourth {
 
 div.signup-form {
     margin-top: 3%;
-  	margin-left: 5%;
+    margin-left: 5%;
 }
 
 div.signup-form label {
-	color: #7C0E17;
-	line-height: 0;
+    color: #7C0E17;
+    line-height: 0;
 }
 
 .signup-form .form-inline.signup-form {
-	width: 95%;
+    width: 95%;
 }
 
 /*div.signup-form input, div.signup-form textarea {
@@ -291,9 +291,9 @@ div.signup-form label {
 }*/
 
 .signup-form fieldset {
-	display: inline-block;
-	width: 80%;
-	margin-right: -10%;
+    display: inline-block;
+    width: 80%;
+    margin-right: -10%;
 }
 
 .signup-form .form-group {
@@ -302,21 +302,35 @@ div.signup-form label {
 }
 
 .signup-form .btn-primary {
-	background-color: #D50909;
-  	padding: 5px 50px;
-  	border: transparent;
-  	margin: auto;
-  	border-radius: inherit;
-  	display: inline;
-  	border-color: transparent;
-  	padding: 10px 50px;
-  	letter-spacing: .1em;
-  	font-weight: 600;
+    background-color: #D50909;
+    padding: 5px 50px;
+    border: transparent;
+    margin: auto;
+    border-radius: 0;
+    display: inline;
+    border-color: transparent;
+    padding: 10px 50px;
+    letter-spacing: .1em;
+    font-weight: 600;
 }
 
 .signup-form .btn-primary:hover, .signup-form .btn-primary:focus {
-	color: #D50909;
-	background: white;
+    color: #D50909;
+    background: white;
+}
+
+.signup-form .help-block {
+    position: absolute;
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+.signup-form .has-error .help-block {
+    color: #D51511;
+}
+
+div.form-group.has-error input {
+    border: 1px solid #D51511;
 }
 
 h3.fourth {
@@ -377,36 +391,36 @@ footer p {
         }
 
         section.landing-intro h1.second {
-        	font-size: 2.5em;
+            font-size: 2.5em;
         }
 
         p.landing-intro-text {
-        	font-size: 1.2em;
+            font-size: 1.2em;
         }
 
         /* Fourth Section ----------- */
 
         h1.fourth {
-        	font-size: 1.8em;
+            font-size: 1.8em;
         }
 
         div.signup-form {
-        	width: 100%;
+            width: 100%;
         }
 
         label.control-label {
-        	display: none;
+            display: none;
         }
 
         .signup-form .form-group {
-        	width: 45%;
-        	padding-right: 3%;
+            width: 45%;
+            padding-right: 3%;
         }
 
         .signup-form .btn-primary {
-        	padding: 10px 30px; 
-        	vertical-align: top;
-        	margin-left: 5%;
+            padding: 10px 30px; 
+            vertical-align: top;
+            margin-left: 5%;
         }
     }
 
@@ -468,32 +482,38 @@ footer p {
         }
 
         h1.fourth {
-        	font-size: 1.8em;
+            font-size: 1.8em;
         }
 
         div.signup-form {
-        	width: 100%;
+            width: 100%;
         }
 
         label.control-label {
-        	display: none;
+            display: none;
         }
 
         .signup-form .form-group {
-        	width: 45%;
-        	padding-right: 3%;
+            width: 45%;
+            padding-right: 3%;
         }
 
         .signup-form .btn-primary {
-        	padding: 10px 30px; 
-        	vertical-align: top;
-        	margin-left: 5%;
+            padding: 10px 30px; 
+            vertical-align: top;
+            margin-left: 5%;
         }
     }
 
     /* Landscape phones and smaller ----------- */
     @media (max-width: 480px) {
         /* Landing Page ----------- */
+        
+        /* Navigation ----------- */
+        div.navbar-header {
+            margin-right: 0 !important;
+        }
+
         /* First Section ----------- */
 
         section.landing-intro h2 {
@@ -519,35 +539,42 @@ footer p {
         /* Fourth Section ----------- */
 
         .page-header.fourth {
-          text-align: center;
-          line-height: 1.2;
+            text-align: center;
+            line-height: 1.2;
+            text-shadow: -1px -1px 0 #F0E9E3, 1px -1px 0 #F0E9E3, -1px 1px 0 #F0E9E3, 1px 1px 0 #F0E9E3;
         }
 
         div.signup-form {
-          margin: auto;
+            margin: auto;
         }
 
         .signup-form .form-inline.signup-form {
-        	width: 100%; 
+            width: 100%; 
         }
 
         .signup-form fieldset {
-        	display: block;
-        	margin: auto; 
-        	margin-top: 5%; 
+            display: block;
+            margin: auto; 
+            margin-top: 5%; 
         }
 
         .signup-form .form-group {
-        	width: 90%; 
-        	padding-right: 0; 
-        	margin: auto; 
+            width: 90%; 
+            padding-right: 0; 
+            margin: auto; 
+        }
+
+        .signup-form .help-block {
+            margin: auto;
         }
 
         .signup-form .btn-primary {
-        	padding: 5px 20px;
-        	vertical-align: middle;
-        	margin: auto; 
-        	display: block;
-        	margin-bottom: 10%;
+            padding: 5px 20px;
+            vertical-align: middle;
+            margin: auto; 
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 10%;
         }
+
 }
